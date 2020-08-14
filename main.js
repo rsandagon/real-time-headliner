@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     getJSON('news.json', function(data) {
         data.forEach(function (repo) {
             var child = `
-                <h1 class="text-6xl font-bold mt-16">
+                <h3 class="text-2xl text-red-400 font-bold mt-16">
                       <a href='${repo.url}'>${repo.headline}</a>
-                </h1>
+                </h3>
             `;
             container.insertAdjacentHTML('beforeend', child);
         });
