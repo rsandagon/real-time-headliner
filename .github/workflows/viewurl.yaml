@@ -27,3 +27,13 @@ jobs:
       - name: Execute Python script
         run: |
           python scripts/update.py
+
+      - name: setup git config
+        run: |
+          git config user.name ${{ secrets.USERNAME }}
+          git config user.email ${{ secrets.EMAIL }}
+
+      - name: commit changes
+        run: |
+          chmod +x ./scripts/commit.sh
+          ./scripts/commit.sh
