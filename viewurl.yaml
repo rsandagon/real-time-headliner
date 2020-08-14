@@ -1,0 +1,29 @@
+name: View My URL
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron:  '0 */15 * * *'
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup Python Environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: Install Requirements
+        run: pip install -r requirements.txt
+
+      - name: Execute Python script
+        run: |
+          python scripts/update.py
