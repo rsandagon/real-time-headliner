@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     getJSON('news.json', function(data) {
         data.forEach(function (repo) {
             var child = `
-                <h1 class="text-6xl font-bold mt-16">Tokyo</h1>
+                <h1 class="text-6xl font-bold mt-16">
                       <a href='${repo.url}'>${repo.headline}</a>
                 </h1>
             `;
