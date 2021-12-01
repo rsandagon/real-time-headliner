@@ -34,7 +34,7 @@ def get_rappler_headline(url):
     soup = BeautifulSoup(r.text,'html.parser')
     print('>', soup.find('h3'))
     h3 =  soup.find('h3')
-    parent = h3.find_parent()
+    parent = h3
     return {
         "url": url + parent['href'],
         "headline": h3.text
