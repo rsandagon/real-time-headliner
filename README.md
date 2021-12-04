@@ -6,5 +6,5 @@
 A cron job runs every 15 minutes to check the headlines and commit changes in the repository.
 
 
-<div style="text-align:center"><img src="https://raw.githubusercontent.com/rsandagon/real-time-headliner/master/realTime.jpg" /></div>
+<div style="text-align:center"><a href="https://rsandagon.github.io/real-time-headliner/><img src="https://raw.githubusercontent.com/rsandagon/real-time-headliner/master/realTime.jpg" /></a></div>
 
