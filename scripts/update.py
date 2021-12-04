@@ -36,7 +36,7 @@ def get_rappler_headline(url):
     h3 =  soup.find('h3')
     parent = h3
     return {
-        "url": url + parent['href'],
+        "url": "https://rappler.com",
         "headline": h3.text
     }
 
