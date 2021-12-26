@@ -25,8 +25,8 @@ def get_abscbn_headline(url):
     soup = BeautifulSoup(r.text,'html.parser')
     print('>',soup.select(".news-title a")[0].text)
     return {
-        "url": "https://news.abs-cbn.com" + soup.select(".news-title a")[0]['href'],
-        "headline": soup.select(".news-title a")[0].text
+        "url": "https://news.abs-cbn.com" + soup.select(".news-title a")['href'],
+        "headline": soup.select(".news-title a").text
     }
 
 def get_rappler_headline(url):
