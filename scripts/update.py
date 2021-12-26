@@ -16,7 +16,7 @@ def get_cnn_headline(url):
     r = requests.get(url)
     soup = BeautifulSoup(r.text,'html.parser')
     return {
-        "url": url + soup.find(".cpmedium-header a")[0]['href'],
+        "url": url + soup.select(".cpmedium-header a")[0]['href'],
         "headline": soup.select(".cpmedium-header a")[0].text
     }
 
