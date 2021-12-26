@@ -24,7 +24,7 @@ def get_abscbn_headline(url):
     r = requests.get(url)
     soup = BeautifulSoup(r.text,'html.parser')
 
-    print('abs title', soup.find(".news-title"))
+    print('abs title', soup.find("#latest-news"))
 
     return {
         "url": "https://news.abs-cbn.com",
