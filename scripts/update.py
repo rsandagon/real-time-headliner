@@ -23,7 +23,6 @@ def get_cnn_headline(url):
 def get_abscbn_headline(url):
     r = requests.get(url)
     soup = BeautifulSoup(r.text,'html.parser')
-    print('>',soup.select(".news-title a")[0].text)
     return {
         "url": "https://news.abs-cbn.com" + soup.select(".news-title a")['href'],
         "headline": soup.select(".news-title a").text
