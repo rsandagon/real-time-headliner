@@ -16,7 +16,7 @@ def get_cnn_headline(url):
     r = requests.get(url)
     soup = BeautifulSoup(r.text,'html.parser')
     return {
-        "url": url + soup.select(".cpmedium-header a")[0]['href'],
+        "url": url + soup.find(".cpmedium-header a")[0]['href'],
         "headline": soup.select(".cpmedium-header a")[0].text
     }
 
@@ -24,8 +24,8 @@ def get_abscbn_headline(url):
     r = requests.get(url)
     soup = BeautifulSoup(r.text,'html.parser')
     return {
-        "url": "https://news.abs-cbn.com" + soup.select(".news-title a")['href'],
-        "headline": soup.select(".news-title a").text
+        "url": "https://news.abs-cbn.com" + soup.find(".news-title a").get('href'),
+        "headline": soup.select(".news-title a").get_text()
     }
 
 def get_rappler_headline(url):
