@@ -15,10 +15,16 @@ def view_url_data(data):
 def get_cnn_headline(url):
     r = requests.get(url)
     soup = BeautifulSoup(r.text,'html.parser')
+    
+    print(soup.select(".cpmedium-header a"))
     return {
-        "url": url + soup.select(".cpmedium-header a")[0]['href'],
-        "headline": soup.select(".cpmedium-header a")[0].text
-    }
+        "url": url,
+        "headline": "cnn headline"
+    }    
+#     return {
+#         "url": url + soup.select(".cpmedium-header a")[0]['href'],
+#         "headline": soup.select(".cpmedium-header a")[0].text
+#     }
 
 def get_abscbn_headline(url):
     r = requests.get(url)
