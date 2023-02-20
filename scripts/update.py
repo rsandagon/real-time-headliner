@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 def view_url_data(data):
     headlines = []
-    headlines.append(get_cnn_headline("https://cnnphilippines.com"))
+    # headlines.append(get_cnn_headline("https://cnnphilippines.com"))
     headlines.append(get_abscbn_headline("https://news.abs-cbn.com/news"))
     headlines.append(get_rappler_headline("https://rappler.com"))
 
