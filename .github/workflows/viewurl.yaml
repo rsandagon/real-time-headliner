@@ -19,7 +19,7 @@ jobs:
       - name: Setup Python Environment
         uses: actions/setup-python@v3
         with:
-          python-version: 3.12.7
+          python-version: 3.7.15
 
       - name: Install Requirements
         run: pip install -r requirements.txt
