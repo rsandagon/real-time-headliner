@@ -1,5 +1,7 @@
 ## Real-Time Headlines
 
+UPDATE: Moving to LLM Approach this 2025! Stopping the github actions for now
+
 ![View My URL](https://github.com/rsandagon/cron-scheduler-pafy/workflows/View%20My%20URL/badge.svg)
 
 * This application fetches real-time headlines from Rappler, ABS-CBN News and CNN via Github actions. 
